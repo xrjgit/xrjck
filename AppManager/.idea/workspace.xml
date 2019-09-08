@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a983d69b-5f11-41cc-ad53-2a152872aed4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -95,11 +94,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="txt" value="9" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="PLAIN_TEXT" value="9" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -321,7 +322,7 @@
     <option name="jreName" value="1.7" />
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-124" />
     <option name="y" value="46" />
     <option name="width" value="1804" />
@@ -410,7 +411,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567945455446" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567945532914" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -523,12 +524,20 @@
       <workItem from="1567782878203" duration="851000" />
       <workItem from="1567820157709" duration="602000" />
       <workItem from="1567940889547" duration="1373000" />
-      <workItem from="1567944239448" duration="1056000" />
+      <workItem from="1567944239448" duration="1334000" />
     </task>
+    <task id="LOCAL-00001" summary="xrj cs">
+      <created>1567945504564</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567945504565</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22303000" />
+    <option name="totallyTimeSpent" value="22581000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -540,7 +549,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17700455" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -583,6 +592,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="xrj cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="xrj cs" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://D:/Sax/项目工程/项目工程/AppInfoSystem/src/cn/appsys/pojo/AppInfo.java" />
