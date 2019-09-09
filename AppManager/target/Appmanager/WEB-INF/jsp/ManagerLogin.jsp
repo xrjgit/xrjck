@@ -21,25 +21,25 @@
     <title>后台管理系统</title>
 
     <!-- For favicon png -->
-    <link rel="shortcut icon" type="image/icon" href="/statics/assets/logo/favicon.png"/>
+    <link rel="shortcut icon" type="image/icon" href="/statics/lr/logo/favicon.png"/>
 
     <!--font-awesome.min.css-->
-    <link rel="stylesheet" href="/statics/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/statics/lr/css/font-awesome.min.css">
 
     <!--animate.css-->
-    <link rel="stylesheet" href="/statics/assets/css/animate.css">
+    <link rel="stylesheet" href="/statics/lr/css/animate.css">
 
     <!--bootstrap.min.css-->
-    <link rel="stylesheet" href="/statics/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/statics/lr/css/bootstrap.min.css">
 
     <!-- bootsnav -->
-    <link rel="stylesheet" href="/statics/assets/css/bootsnav.css" >
+    <link rel="stylesheet" href="/statics/lr/css/bootsnav.css" >
 
     <!--style.css-->
-    <link rel="stylesheet" href="/statics/assets/css/style.css">
+    <link rel="stylesheet" href="/statics/lr/css/style.css">
 
     <!--responsive.css-->
-    <link rel="stylesheet" href="/statics/assets/css/responsive.css">
+    <link rel="stylesheet" href="/statics/lr/css/responsive.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -193,19 +193,19 @@
 
 <!-- Include all js compiled plugins (below), or include individual files as needed -->
 
-<script src="/statics/assets/js/jquery.js"></script>
+<script src="/statics/lr/js/jquery.js"></script>
 
 <!--modernizr.min.js-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
 <!--bootstrap.min.js-->
-<script src="/statics/assets/js/bootstrap.min.js"></script>
+<script src="/statics/lr/js/bootstrap.min.js"></script>
 
 <!-- bootsnav js -->
-<script src="/statics/assets/js/bootsnav.js"></script>
+<script src="/statics/lr/js/bootsnav.js"></script>
 
 <!-- jquery.sticky.js -->
-<script src="/statics/assets/js/jquery.sticky.js"></script>
+<script src="/statics/lr/js/jquery.sticky.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
 
