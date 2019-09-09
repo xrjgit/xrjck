@@ -9,6 +9,7 @@
 <%@ page isELIgnored="false" %>
 <%@ taglib prefix="fm" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<jsp:useBean id="user"  class="cn.afm.pojo.User" scope="request" ></jsp:useBean>
 <html>
 <head>
     <!-- meta data -->
@@ -69,16 +70,16 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="signin-form">
-                        <form action="/user/dologin" method="post">
+                        <form action="" method="post">
                             <div class="form-group">
                                 <label for="signin_form">账户</label>
-                                <input type="text" class="form-control" name="devCode" id="signin_form" placeholder="请输入账号">
-                                <fm:errors path="devCode"/>
+                                <input class="form-control" name="devCode" id="signin_form" placeholder="请输入账号"/>
+                                <span class="dlzerror" style="color: #ff0000">${devCodemessage}</span>
                             </div><!--/.form-group -->
                             <div class="form-group">
                                 <label for="signin_form">密码</label>
                                 <input type="password" class="form-control" name="devPassword" id="signin_form" placeholder="请输入密码">
-                                <fm:errors path="devPassword"/>
+                                <span class="dlperror" style="color: #ff0000">${devPwdmessage}</span>
                             </div><!--/.form-group -->
                             <div class="row">
                                 <div class="col-sm-12">
@@ -103,7 +104,7 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="signin-footer">
-                                        <button type="submit" class="btn signin_btn dellogin" data-toggle="modal" data-target=".signin_modal">
+                                        <button type="button" class="btn signin_btn dellogin" data-toggle="modal" data-target=".signin_modal">
                                             登录
                                         </button>
                                         <p>
@@ -228,7 +229,7 @@
     <div id="scroll-Top">
         <i class="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
     </div><!--/.scroll-Top-->
-
+    <input type="hidden" id="path" name="path" value="${pageContext.request.contextPath }"/>
 </footer><!--/.hm-footer-copyright-->
 <!--footer copyright  end -->
 
@@ -254,5 +255,6 @@
 <!--Custom JS-->
 <script src="/statics/lr/js/custom.js"></script>
 
+<script src="/statics/lr/js/dlogin.js"></script>
 </body>
 </html>
