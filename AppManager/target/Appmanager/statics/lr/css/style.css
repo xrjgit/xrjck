@@ -147,7 +147,6 @@ html,body{
 .signin-form .form-col{
     width: 48.5%;
     float: left;
-    
 }
 .signin-form .form-col1{
     width: 48%;
@@ -370,5 +369,24 @@ html,body{
     color: #1c7cf8;
 	border:1px solid #1c7cf8;
 	border-radius:50%;
+}
+.cols a{
+    border: 2px solid gainsboro;
+    padding: 12px 20px;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.ht{
+    margin: 10px 20px 0px 110px;
+    background-color: deepskyblue;
+}
+.kf{
+    margin: 10px 20px 0px 40px;
+    background-color: palegreen;
+}
+.cols a:hover{
+    transform: scale(1.25);
+    transition: all 2s ease-in-out;
 }
 /*========================Thank you=================

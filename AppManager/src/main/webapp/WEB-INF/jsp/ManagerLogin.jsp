@@ -6,6 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isELIgnored="false" %>
+<%@ taglib prefix="fm" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <!-- meta data -->
@@ -66,52 +69,51 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="signin-form">
-                        <form action="signin.html">
+                        <form action="${pageContext.request.contextPath }/backenduser/dologin" method="post">
                             <div class="form-group">
                                 <label for="signin_form">账户</label>
-                                <input type="email" class="form-control" id="signin_form" placeholder="请输入账号">
+                                <input type="text" class="form-control" name="userCode" id="signin_form" placeholder="请输入账号" value="${mcode}">
+                                <span class="mlzerror" style="color: #ff0000">${backendCodeMessage}</span>
                             </div><!--/.form-group -->
                             <div class="form-group">
                                 <label for="signin_form">密码</label>
-                                <input type="password" class="form-control" id="signin_form" placeholder="请输入密码">
+                                <input type="password" class="form-control" name="userPassword" id="signin_form" placeholder="请输入密码" value="${mpwd}">
+                                <span class="mlzerror" style="color: #ff0000">${backendPasswordMessage}</span>
                             </div><!--/.form-group -->
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="signin-password">
+                                        <div class="awesome-checkbox-list">
+                                            <ul class="unstyled centered">
+                                                <li>
+                                                    <input class="styled-checkbox" name="missavepwd" id="styled-checkbox-2" type="checkbox" value="true">
+                                                    <label for="styled-checkbox-2">记住密码</label>
+                                                </li>
+                                                <li>
+                                                    <a href="${pageContext.request.contextPath }/user/enter">返回入口</a>
+                                                </li>
+
+                                            </ul>
+                                        </div><!--/.awesome-checkbox-list -->
+                                    </div><!--/.signin-password -->
+                                </div><!--/.col -->
+                            </div><!--/.row -->
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="signin-footer">
+                                        <button type="submit" class="btn signin_btn" data-toggle="modal" data-target=".signin_modal">
+                                            登录
+                                        </button>
+                                    </div><!--/.signin-footer -->
+                                </div><!--/.col-->
+                            </div><!--/.row -->
                         </form><!--/form -->
+                    </div><!--/.sign-content -->
                     </div><!--/.signin-form -->
                 </div><!--/.col -->
             </div><!--/.row -->
-
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="signin-password">
-                        <div class="awesome-checkbox-list">
-                            <ul class="unstyled centered">
-
-                                <li>
-                                    <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2">
-                                    <label for="styled-checkbox-2">记住密码</label>
-                                </li>
-
-                                <li>
-                                    <a href="#">忘记密码?</a>
-                                </li>
-
-                            </ul>
-                        </div><!--/.awesome-checkbox-list -->
-                    </div><!--/.signin-password -->
-                </div><!--/.col -->
-            </div><!--/.row -->
-
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="signin-footer">
-                        <button type="button" class="btn signin_btn" data-toggle="modal" data-target=".signin_modal">
-                            登录
-                        </button>
-                    </div><!--/.signin-footer -->
-                </div><!--/.col-->
-            </div><!--/.row -->
-
-        </div><!--/.sign-content -->
 
         <!-- modal part start -->
         <!--<div class="modal fade signin_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">-->

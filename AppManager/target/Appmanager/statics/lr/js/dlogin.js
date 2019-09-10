@@ -15,7 +15,7 @@
             $.ajax({
                 type:"POST",
                 url:path+"/user/dologin",
-                data:{devCode:devCode,devPassword:devPassword},
+                data:{devCode:devCode,devPassword:devPassword,issavepwd:$(".issavepwd").prop("checked")},
                 dataType:"json",
                 success:function (data) {
                     $(".dlzerror").text("");
@@ -29,6 +29,7 @@
                         $("[name=devPassword]").val("");
                     }
                     if($.isEmptyObject(data)){
+                        //此处使用ajax请求后台转到成功页面
                         alert("正确");
                     }
                 }

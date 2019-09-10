@@ -10,10 +10,6 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
 http://www.springframework.org/schema/mvc
 http://www.springframework.org/schema/mvc/spring-mvc.xsd"
 >
-    <!--静态资源映射-->
-    <mvc:resources mapping="/statics/**" location="/statics/"/>
-    <!--用于扫描注解-->
-    <context:component-scan base-package="cn.afm.controller"/>
     <!--一键式配置，以下标签会自动注册处理器映射与处理器适配器-->
     <mvc:annotation-driven>
         <mvc:message-converters>
@@ -40,6 +36,11 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd"
             </bean>
         </mvc:message-converters>
     </mvc:annotation-driven>
+    <!--静态资源映射-->
+    <mvc:resources mapping="/statics/**" location="/statics/"/>
+    <!--用于扫描注解-->
+    <context:component-scan base-package="cn.afm.controller"/>
+
     <!--控制器返回ModelAndView对象，带有模型与视图，以下配置将得到视图名进行匹配-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/jsp/"/>

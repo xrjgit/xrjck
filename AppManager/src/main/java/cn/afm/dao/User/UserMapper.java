@@ -6,4 +6,7 @@ import java.util.List;
 
 public interface UserMapper {
     User getUserByCode(User user);
+    int isexistsCode(String code);
+    int isexistsEmail(String email);
+    int addUser(User user);
 }
