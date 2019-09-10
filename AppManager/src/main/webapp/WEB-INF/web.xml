@@ -43,6 +43,10 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 
 
   <welcome-file-list>
+<<<<<<< HEAD
     <welcome-file>/WEB-INF/jsp/NoPass.jsp</welcome-file>
+=======
+    <welcome-file>/WEB-INF/jsp/Entrance.jsp</welcome-file>
+>>>>>>> bafad2670f5c26235e211305d681a0e8a0c09692
   </welcome-file-list>
 </web-app>

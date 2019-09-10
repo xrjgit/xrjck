@@ -16,4 +16,34 @@ public class UserServiceImp implements UserService {
         User devuser=userMapper.getUserByCode(user);
         return devuser;
     }
+
+    @Override
+    public Boolean isexistsCode(String code) {
+        boolean flag=false;
+        int k=userMapper.isexistsCode(code);
+        if(k>0){
+            flag=true;
+        }
+        return flag;
+    }
+
+    @Override
+    public Boolean isexistsEmail(String email) {
+        boolean flag=false;
+        int k=userMapper.isexistsEmail(email);
+        if(k>0){
+            flag=true;
+        }
+        return flag;
+    }
+
+    @Override
+    public Boolean addUser(User user) {
+        boolean flag=false;
+        int k=userMapper.addUser(user);
+        if(k>0){
+            flag=true;
+        }
+        return flag;
+    }
 }

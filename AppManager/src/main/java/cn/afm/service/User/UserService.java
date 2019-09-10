@@ -6,4 +6,7 @@ import java.util.List;
 
 public interface UserService {
     User getUserByCode(User user);
+    Boolean isexistsCode(String code);
+    Boolean isexistsEmail(String email);
+    Boolean addUser(User user);
 }

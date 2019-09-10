@@ -9,7 +9,6 @@
 <%@ page isELIgnored="false" %>
 <%@ taglib prefix="fm" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<jsp:useBean id="user"  class="cn.afm.pojo.User" scope="request" ></jsp:useBean>
 <html>
 <head>
     <!-- meta data -->
@@ -73,12 +72,12 @@
                         <form action="" method="post">
                             <div class="form-group">
                                 <label for="signin_form">账户</label>
-                                <input class="form-control" name="devCode" id="signin_form" placeholder="请输入账号"/>
+                                <input class="form-control" name="devCode" id="signin_form" placeholder="请输入账号" value="${devCode}"/>
                                 <span class="dlzerror" style="color: #ff0000">${devCodemessage}</span>
                             </div><!--/.form-group -->
                             <div class="form-group">
                                 <label for="signin_form">密码</label>
-                                <input type="password" class="form-control" name="devPassword" id="signin_form" placeholder="请输入密码">
+                                <input type="password" class="form-control" name="devPassword" id="signin_form" placeholder="请输入密码" value="${devPwd}"/>
                                 <span class="dlperror" style="color: #ff0000">${devPwdmessage}</span>
                             </div><!--/.form-group -->
                             <div class="row">
@@ -88,12 +87,12 @@
                                             <ul class="unstyled centered">
 
                                                 <li>
-                                                    <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2">
+                                                    <input class="styled-checkbox issavepwd" id="styled-checkbox-2" type="checkbox" value="value2">
                                                     <label for="styled-checkbox-2">记住密码</label>
                                                 </li>
 
                                                 <li>
-                                                    <a href="#">忘记密码?</a>
+                                                    <a href="${pageContext.request.contextPath }/user/enter">返回入口</a>
                                                 </li>
 
                                             </ul>
@@ -109,7 +108,7 @@
                                         </button>
                                         <p>
                                             还没有开发者账号?
-                                            <a href="signup.html">去注册</a>
+                                            <a href="${pageContext.request.contextPath }/user/regist">去注册</a>
                                         </p>
                                     </div><!--/.signin-footer -->
                                 </div><!--/.col-->

@@ -15,7 +15,7 @@
             $.ajax({
                 type:"POST",
                 url:path+"/user/dologin",
-                data:{devCode:devCode,devPassword:devPassword},
+                data:{devCode:devCode,devPassword:devPassword,issavepwd:$(".issavepwd").prop("checked")},
                 dataType:"json",
                 success:function (data) {
                     $(".dlzerror").text("");

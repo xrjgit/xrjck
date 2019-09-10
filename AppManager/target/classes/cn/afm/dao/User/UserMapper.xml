@@ -5,4 +5,13 @@
     <select id="getUserByCode" resultType="cn.afm.pojo.User" parameterType="cn.afm.pojo.User">
         select * from dev_user where devCode=#{devCode};
     </select>
+    <select id="isexistsCode" parameterType="java.lang.String" resultType="java.lang.Integer">
+        select count(*) from dev_user where devCode=#{code};
+    </select>
+    <select id="isexistsEmail" resultType="java.lang.Integer" parameterType="java.lang.String">
+        select count(*) from dev_user where devEmail=#{email};
+    </select>
+    <insert id="addUser" parameterType="cn.afm.pojo.User">
+        insert into dev_user(devCode,devName,devPassword,devEmail,creationDate) values(#{devCode},#{devName},#{devPassword},#{devEmail},#{creationDate});
+    </insert>
 </mapper>

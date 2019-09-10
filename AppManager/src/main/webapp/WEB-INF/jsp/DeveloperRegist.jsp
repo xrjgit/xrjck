@@ -68,6 +68,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="signin-form">
+<<<<<<< HEAD
                         <form action="signin.html">
                             <div class="form-col">
                                 <div class="form-group">
@@ -92,42 +93,71 @@
                             <div class="form-group">
                                 <label for="signin_form4">确认密码</label>
                                 <input type="password" class="form-control" id="signin_form4" placeholder="请再次输入密码">
+=======
+                        <fm:form method="post" modelAttribute="user">
+                                <div class="form-col">
+                                    <div class="form-group">
+                                        <label for="signin_form">登录名</label>
+                                        <fm:input path="devCode" class="form-control" id="signin_form" placeholder="请输入登录名" value="${user.devCode}"/>
+                                        <span class="dr1"><fm:errors path="devCode" cssStyle="color: #ff0000"/>${devcodeerror}</span>
+                                    </div><!--/.form-group -->
+                                </div><!--/.form-col -->
+                                <div class="form-col1">
+                                    <div class="form-group">
+                                        <label for="signin_form">昵称</label>
+                                        <fm:input path="devName" class="form-control" id="signin_form" placeholder="请输入昵称" value="${user.devName}"/>
+                                        <span class="dr2"><fm:errors path="devName" cssStyle="color: #ff0000"/></span>
+                                    </div><!--/.form-group -->
+                                </div><!--/.form-col1 -->
+                            <div class="form-group" style="clear: both">
+                                <label for="signin_form">邮箱</label>
+                                <fm:input path="devEmail" class="form-control" id="signin_form" placeholder="请输入邮箱" value="${user.devEmail}"/>
+                                <span class="dr3" style="color: #ff0000"><fm:errors path="devEmail" cssStyle="color: #ff0000"/>${devemailerror}</span>
                             </div><!--/.form-group -->
-                        </form><!--/form -->
+                            <div class="form-group">
+                                <label for="signin_form">密码</label>
+                                <fm:password path="devPassword" class="form-control" id="signin_form" placeholder="请输入密码" value="${user.devPassword}"/>
+                                <span class="dr4"><fm:errors path="devPassword" cssStyle="color: #ff0000"/></span>
+                            </div><!--/.form-group -->
+                            <div class="form-group">
+                                <label for="signin_form">确认密码</label>
+                                <input type="password" name="repwd" class="form-control" id="signin_form" placeholder="请再次输入密码" value="${repwd}">
+                                <span class="repwd" style="color: #ff0000">${devrepwderror}</span>
+>>>>>>> bafad2670f5c26235e211305d681a0e8a0c09692
+                            </div><!--/.form-group -->
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="signin-password">
+                                        <div class="awesome-checkbox-list">
+                                            <ul class="unstyled centered">
+                                                <li>
+                                                    <input class="styled-checkbox isaccp" id="styled-checkbox-2" type="checkbox" value="true">
+                                                    <label for="styled-checkbox-2">接受我们的条款</label>
+                                                </li>
+                                            </ul>
+                                        </div><!--/.awesome-checkbox-list -->
+                                    </div><!--/.signin-password -->
+                                </div><!--/.col -->
+                            </div><!--/.row -->
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="signin-footer">
+                                        <button type="submit" class="btn signin_btn regist" data-toggle="modal" data-target=".signin_modal">
+                                            注册
+                                        </button>
+                                        <p>
+                                            已有账号?
+                                            <a href="${pageContext.request.contextPath }/user/login">去登陆</a>
+                                        </p>
+                                    </div><!--/.signin-footer -->
+                                </div><!--/.col-->
+                            </div><!--/.row -->
+                        </fm:form><!--/form -->
                     </div><!--/.signin-form -->
                 </div><!--/.col -->
             </div><!--/.row -->
-
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="signin-password">
-                        <div class="awesome-checkbox-list">
-                            <ul class="unstyled centered">
-                                <li>
-                                    <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2">
-                                    <label for="styled-checkbox-2">接受我们的条款</label>
-                                </li>
-                            </ul>
-                        </div><!--/.awesome-checkbox-list -->
-                    </div><!--/.signin-password -->
-                </div><!--/.col -->
-            </div><!--/.row -->
-
-
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="signin-footer">
-                        <button type="button" class="btn signin_btn" data-toggle="modal" data-target=".signin_modal">
-                            注册
-                        </button>
-                        <p>
-                            已有账号?
-                            <a href="DeveloperLogin.html">去登陆</a>
-                        </p>
-                    </div><!--/.signin-footer -->
-                </div><!--/.col-->
-            </div><!--/.row -->
-
         </div><!--/.sign-content -->
 
         <!-- modal part start -->
@@ -217,7 +247,7 @@
     <div id="scroll-Top3">
         <i class="fa fa-angle-double-up return-to-top" id="scroll-top3" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
     </div><!--/.scroll-Top-->
-
+    <input type="hidden" id="path" name="path" value="${pageContext.request.contextPath }"/>
 </footer><!--/.hm-footer-copyright-->
 <!--footer copyright  end -->
 
@@ -242,6 +272,8 @@
 
 <!--Custom JS-->
 <script src="/statics/lr/js/custom.js"></script>
+
+<script src="/statics/lr/js/devregist.js"></script>
 
 </body>
 </html>
