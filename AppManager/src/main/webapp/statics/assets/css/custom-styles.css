@@ -11,10 +11,12 @@ body {
  #wrapper {
     width: 100%;
     background: #283643;
+     height: auto;
 }
 
 #page-wrapper {
     padding: 15px 15px;
+    height: auto;
     min-height: 600px;
     background: #f3f3f3;
    
@@ -24,7 +26,8 @@ body {
     margin:10px 20px 10px 0px;
     background-color:transparent;
     padding:10px;
-    min-height:1200px;
+    height: auto;
+    min-height:900px;
 }
 
 .text-center {

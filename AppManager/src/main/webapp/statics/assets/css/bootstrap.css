@@ -274,7 +274,7 @@ td, th {
 @font-face {
     font-family: 'Glyphicons Halflings';
     src: url(../fonts/glyphicons-halflings-regular.eot);
-    src: url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'), /*url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'), */url(../fonts/glyphicons-halflings-regular.woff) format('woff'), url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'), url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')
+    src: url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'), /*url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'), */ url(../fonts/glyphicons-halflings-regular.woff) format('woff'), url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'), url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')
 }
 
 .glyphicon {
@@ -6549,8 +6549,8 @@ button.close {
         transition: transform .6s ease-in-out;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-       /* -webkit-perspective: 1000;
-        perspective: 1000*/
+        /* -webkit-perspective: 1000;
+         perspective: 1000*/
     }
 
     .carousel-inner > .item.active.right, .carousel-inner > .item.next {
@@ -7045,30 +7045,37 @@ button.close {
         display: none !important
     }
 }
-.sH4{
+
+.sH4 {
     margin-left: 50px;
     border: 1px solid gainsboro;
     padding: 8px 0px 8px 30px;
 }
-.form-name li{
+
+.form-name li {
     list-style: none;
     display: inline-block;
     margin: 10px 50px 10px 80px;
 }
-.form-name li div{
+
+.form-name li div {
     display: inline-block;
 }
-.rname{
+
+.rname {
     width: 150px;
     height: 36px;
 }
-.select{
+
+.select {
     width: 150px;
     height: 36px;
 }
-.selects{
-    width: 80px;
-    height: 30px;
+
+.selects {
+    width: 90px;
+    height: 34px;
     border: 1px solid gainsboro;
     border-radius: 5px;
+    background: burlywood;
 }

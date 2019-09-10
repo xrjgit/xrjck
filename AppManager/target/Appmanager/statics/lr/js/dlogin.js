@@ -29,6 +29,7 @@
                         $("[name=devPassword]").val("");
                     }
                     if($.isEmptyObject(data)){
+                        //此处使用ajax请求后台转到成功页面
                         alert("正确");
                     }
                 }

@@ -6,6 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isELIgnored="false" %>
+<%@ taglib prefix="fm" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <!-- meta data -->
@@ -74,21 +77,21 @@
                             </div><!--/.form-col -->
                             <div class="form-col1">
                                 <div class="form-group">
-                                    <label for="signin_form">昵称</label>
-                                    <input type="text" class="form-control" id="signin_form" placeholder="请输入昵称">
+                                    <label for="signin_form1">昵称</label>
+                                    <input type="text" class="form-control" id="signin_form1" placeholder="请输入昵称">
                                 </div><!--/.form-group -->
                             </div><!--/.form-col1 -->
                             <div class="form-group">
-                                <label for="signin_form">邮箱</label>
-                                <input type="email" class="form-control" id="signin_form" placeholder="请输入邮箱">
+                                <label for="signin_form2">邮箱</label>
+                                <input type="email" class="form-control" id="signin_form2" placeholder="请输入邮箱">
                             </div><!--/.form-group -->
                             <div class="form-group">
-                                <label for="signin_form">密码</label>
-                                <input type="password" class="form-control" id="signin_form" placeholder="请输入密码">
+                                <label for="signin_form3">密码</label>
+                                <input type="password" class="form-control" id="signin_form3" placeholder="请输入密码">
                             </div><!--/.form-group -->
                             <div class="form-group">
-                                <label for="signin_form">确认密码</label>
-                                <input type="password" class="form-control" id="signin_form" placeholder="请再次输入密码">
+                                <label for="signin_form4">确认密码</label>
+                                <input type="password" class="form-control" id="signin_form4" placeholder="请再次输入密码">
                             </div><!--/.form-group -->
                         </form><!--/form -->
                     </div><!--/.signin-form -->
@@ -211,8 +214,8 @@
 
 <!--footer copyright start -->
 <footer class="footer-copyright">
-    <div id="scroll-Top">
-        <i class="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+    <div id="scroll-Top3">
+        <i class="fa fa-angle-double-up return-to-top" id="scroll-top3" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
     </div><!--/.scroll-Top-->
 
 </footer><!--/.hm-footer-copyright-->

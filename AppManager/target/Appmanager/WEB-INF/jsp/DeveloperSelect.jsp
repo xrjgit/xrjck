@@ -132,6 +132,7 @@
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="table-responsive">
+                                <a href="#" class="btn btn-primary" style="margin-bottom: 10px;">新增APP基础信息</a>
                                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                     <tr>
