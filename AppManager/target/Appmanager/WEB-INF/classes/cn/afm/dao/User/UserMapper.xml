@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.afm.dao.User.UserMapper">
-    <select id="getUserList" resultType="cn.afm.pojo.User">
-        select * from dev_user;
+    <select id="getUserByCode" resultType="cn.afm.pojo.User" parameterType="cn.afm.pojo.User">
+        select * from dev_user where devCode=#{devCode};
     </select>
 </mapper>

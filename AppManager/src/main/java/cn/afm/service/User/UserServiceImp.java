@@ -10,9 +10,10 @@ import java.util.List;
 public class UserServiceImp implements UserService {
     @Autowired
     private UserMapper userMapper;
+
     @Override
-    public List<User> getUserList() {
-        List<User> users=userMapper.getUserList();
-        return users;
+    public User getUserByCode(User user) {
+        User devuser=userMapper.getUserByCode(user);
+        return devuser;
     }
 }
