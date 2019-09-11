@@ -30,7 +30,7 @@
 
 <body>
 <div id="wrapper">
-    <nav class="navbar navbar-default top-navbar" role="navigation">
+    <%--<nav class="navbar navbar-default top-navbar" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -100,7 +100,9 @@
                 </li>
             </ul>
         </div>
-    </nav>
+    </nav>--%>
+        <%@include file="/WEB-INF/jsp/commom/head.jsp"%>
+        <%@include file="/WEB-INF/jsp/commom/Mleft.jsp"%>
     <div id="page-wrapper">
         <div id="page-inner">
             <h4 class="sH4">

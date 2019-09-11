@@ -16,52 +16,56 @@ import javax.validation.Valid;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 @Controller
-@SessionAttributes(value="devusersession")
+@SessionAttributes(value = "devusersession")
 @RequestMapping("/user")
 public class UserController {
     @Autowired
     private UserService usi;
 
     @RequestMapping(value = "/dologin",method = RequestMethod.POST)
-    @ResponseBody
-    public Map dologin(User user, Model model, @RequestParam(value = "issavepwd",required = false) String issavepwd, HttpServletResponse response, HttpSession session){
-        Map<String, String> resultMap = new HashMap<String, String>();
+    public String dologin(User user, Model model, @RequestParam(value = "issavepwd",required = false) String issavepwd, HttpServletResponse response){
         String devCode=user.getDevCode();
         String devPassword=user.getDevPassword();
+        boolean messageflag=false;
         if(devCode==null||devCode.equals("")){
-            resultMap.put("devCodemessage","登录名不能为空");
+            model.addAttribute("devCodeMessage","登录名不能为空");
+            model.addAttribute("dpwd",devPassword);
+            messageflag=true;
         }
         if(devPassword==null||devPassword.equals("")){
-            resultMap.put("devPwdmessage","密码不能为空");
+            model.addAttribute("devPasswordMessage","密码不能为空");
+            model.addAttribute("dcode",devCode);
+            messageflag=true;
         }
-        if(devCode!=null&&!devCode.equals("")&&devPassword!=null&&!devPassword.equals("")){
-            User devuser=usi.getUserByCode(user);
-            if(devuser!=null){
-                if(!devuser.getDevPassword().equals(user.getDevPassword())){
-                    resultMap.put("devPwdmessage","密码错误");
+        if(messageflag){
+            return "DeveloperLogin";
+        }else{
+            User user1=usi.getUserByCode(user);
+            if(user1!=null){
+                if(!user1.getDevPassword().equals(devPassword)){
+                    model.addAttribute("devPasswordMessage","密码错误");
+                    model.addAttribute("dcode",devCode);
+                    return "DeveloperLogin";
                 }else{
-                    //判断是否需要记住密码
-                    if(issavepwd.equals("true")){
-                        Cookie devuserCodecookie=new Cookie("devuserCode",user.getDevCode());
-                        Cookie devuserPwdcookie=new Cookie("devuserPwd",user.getDevPassword());
+                    if(issavepwd!=null&&!issavepwd.equals("")){
+                        Cookie devuserCodecookie=new Cookie("devuserCode",devCode);
+                        Cookie devuserPwdcookie=new Cookie("devuserPwd",devPassword);
                         devuserCodecookie.setMaxAge(60*60*24*3);
                         devuserPwdcookie.setMaxAge(60*60*24*3);
                         response.addCookie(devuserCodecookie);
                         response.addCookie(devuserPwdcookie);
                     }
-                    //此处登录成功将该开发者添加到session域
-//                    session.setAttribute("devusersession",user);
-                    model.addAttribute("devusersession",user);
+                    model.addAttribute("devusersession",user1);
+                    return "DeveloperShow";
                 }
             }else{
-                resultMap.put("devCodemessage","登录名错误");
+                model.addAttribute("devCodeMessage","登录名错误");
+                model.addAttribute("dpwd",devPassword);
+                return "DeveloperLogin";
             }
         }
-        return resultMap;
     }
 
     @RequestMapping(value = "/regist",method = RequestMethod.GET)
@@ -122,7 +126,6 @@ public class UserController {
     public String loginview(@RequestParam(value = "devCode",required = false) String devCode,@RequestParam(value = "devPwd",required = false) String devPwd,Model model){
         model.addAttribute("devCode",devCode);
         model.addAttribute("devPwd",devPwd);
-        System.out.println(devCode+devPwd);
         return "DeveloperLogin";
     }
 
@@ -146,7 +149,7 @@ public class UserController {
     }
 
     @RequestMapping("/developershow")
-    public String developershow(HttpSession session){
+    public String developershow(){
         return "DeveloperShow";
     }
 

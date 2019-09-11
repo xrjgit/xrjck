@@ -30,7 +30,7 @@
 
 <body>
 <div id="wrapper">
-    <nav class="navbar navbar-default top-navbar" role="navigation">
+    <%--<nav class="navbar navbar-default top-navbar" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -86,7 +86,9 @@
                 </li>
             </ul>
         </div>
-    </nav>
+    </nav>--%>
+        <%@include file="/WEB-INF/jsp/commom/head.jsp"%>
+        <%@include file="/WEB-INF/jsp/commom/left.jsp"%>
     <!-- /. NAV SIDE  -->
     <div id="page-wrapper">
         <div id="page-inner" class="hy">
@@ -109,23 +111,23 @@
                         </li>
                         <li>
                             <div>APP状态</div>
-                            <div><select class="select"><option value=""></option></select></div>
+                            <div><select class="select apptatus"></select></div>
                         </li>
                         <li>
                             <div>所属平台</div>
-                            <div><select class="select"><option value=""></option></select></div>
+                            <div><select class="select flatform"><option value=""></option></select></div>
                         </li>
                         <li>
                             <div>一级分类</div>
-                            <div><select class="select"><option value=""></option></select></div>
+                            <div><select class="select cate1"><option value=""></option></select></div>
                         </li>
                         <li>
                             <div>二级分类</div>
-                            <div><select class="select"><option value=""></option></select></div>
+                            <div><select class="select cate2"><option value=""></option></select></div>
                         </li>
                         <li>
                             <div>三级分类</div>
-                            <div><select class="select"><option value=""></option></select></div>
+                            <div><select class="select cate3"><option value=""></option></select></div>
                         </li>
                         <li>
                             <div><input type="submit" class="btn btn-success"/></div>
@@ -178,6 +180,31 @@
                                     </tr>
                                     </tbody>
                                 </table>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="dataTables_info" id="dataTables-example_info" role="alert" aria-live="polite" aria-relevant="all" style="margin-top: 27px;">
+                                            共11条记录1/3页
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6" style="overflow: hidden">
+                                        <div class="dataTables_paginate paging_simple_numbers" id="dataTables-example_paginate" style="overflow: hidden">
+                                            <ul class="pagination" style="overflow: hidden">
+                                                <li class="paginate_button previous disabled" aria-controls="dataTables-example" tabindex="0" id="dataTables-example_previous" style="overflow: hidden">
+                                                    <a href="#" style="margin-left: 270px;">首页</a>
+                                                </li>
+                                                <li class="paginate_button active" aria-controls="dataTables-example" tabindex="0">
+                                                    <a href="#">下一页</a>
+                                                </li>
+                                                <li class="paginate_button " aria-controls="dataTables-example" tabindex="0">
+                                                    <a href="#">上一页</a>
+                                                </li>
+                                                <li class="paginate_button " aria-controls="dataTables-example" tabindex="0">
+                                                    <a href="#">尾页</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
@@ -192,29 +219,7 @@
 </div>
 <!-- /. PAGE WRAPPER  -->
 </div>
-<!-- /. WRAPPER  -->
-<!-- JS Scripts-->
-<!-- jQuery Js -->
-<script src="/statics/assets/js/jquery-1.10.2.js"></script>
-<!-- Bootstrap Js -->
-<script src="/statics/assets/js/bootstrap.min.js"></script>
-
-<!-- Metis Menu Js -->
-<script src="/statics/assets/js/jquery.metisMenu.js"></script>
-<!-- Morris Chart Js -->
-<script src="/statics/assets/js/morris/raphael-2.1.0.min.js"></script>
-<script src="/statics/assets/js/morris/morris.js"></script>
-
-
-<script src="/statics/assets/js/easypiechart.js"></script>
-<!--<script src="assets/js/easypiechart-data.js"></script>-->
-
-
-<!-- Custom Js -->
-<script src="/statics/assets/js/custom-scripts.js"></script>
-
-<script src="/statics/lr/js/developerselect.js"></script>
-
+<%@include file="/WEB-INF/jsp/commom/foot.jsp"%>
 </body>
 
 </html>

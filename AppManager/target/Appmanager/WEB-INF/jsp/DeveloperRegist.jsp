@@ -64,7 +64,6 @@
 
         <div class="sign-content">
             <h2>开发者注册</h2>
-
             <div class="row">
                 <div class="col-sm-12">
                     <div class="signin-form">

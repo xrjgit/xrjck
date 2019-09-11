@@ -69,16 +69,16 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="signin-form">
-                        <form action="" method="post">
+                        <form action="${pageContext.request.contextPath }/user/dologin" method="post">
                             <div class="form-group">
                                 <label for="signin_form">账户</label>
-                                <input class="form-control" name="devCode" id="signin_form" placeholder="请输入账号" value="${devCode}"/>
-                                <span class="dlzerror" style="color: #ff0000">${devCodemessage}</span>
+                                <input class="form-control" name="devCode" id="signin_form" placeholder="请输入账号" value="${dcode}"/>
+                                <span class="dlzerror" style="color: #ff0000">${devCodeMessage}</span>
                             </div><!--/.form-group -->
                             <div class="form-group">
                                 <label for="signin_form">密码</label>
-                                <input type="password" class="form-control" name="devPassword" id="signin_form" placeholder="请输入密码" value="${devPwd}"/>
-                                <span class="dlperror" style="color: #ff0000">${devPwdmessage}</span>
+                                <input type="password" class="form-control" name="devPassword" id="signin_form" placeholder="请输入密码" value="${dpwd}"/>
+                                <span class="dlperror" style="color: #ff0000">${devPasswordMessage}</span>
                             </div><!--/.form-group -->
                             <div class="row">
                                 <div class="col-sm-12">
@@ -87,7 +87,7 @@
                                             <ul class="unstyled centered">
 
                                                 <li>
-                                                    <input class="styled-checkbox issavepwd" id="styled-checkbox-2" type="checkbox" value="value2">
+                                                    <input class="styled-checkbox issavepwd" name="issavepwd" id="styled-checkbox-2" type="checkbox" value="">
                                                     <label for="styled-checkbox-2">记住密码</label>
                                                 </li>
 
@@ -103,7 +103,7 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="signin-footer">
-                                        <button type="button" class="btn signin_btn dellogin" data-toggle="modal" data-target=".signin_modal">
+                                        <button type="submit" class="btn signin_btn dellogin" data-toggle="modal" data-target=".signin_modal">
                                             登录
                                         </button>
                                         <p>
