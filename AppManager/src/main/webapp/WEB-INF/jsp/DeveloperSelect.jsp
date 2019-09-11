@@ -1,17 +1,9 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 小胖
-  Date: 2019/9/9
-  Time: 20:26
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,10 +19,9 @@
     <!-- Google Fonts-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
-
 <body>
 <div id="wrapper">
-    <nav class="navbar navbar-default top-navbar" role="navigation">
+   <%-- <nav class="navbar navbar-default top-navbar" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -86,7 +77,9 @@
                 </li>
             </ul>
         </div>
-    </nav>
+    </nav>--%>
+    <%@include file="/WEB-INF/jsp/commom/head.jsp"%>
+    <%@include file="/WEB-INF/jsp/commom/left.jsp"%>
     <div id="page-wrapper">
         <div id="page-inner">
             <h4 class="sH4">
@@ -181,20 +174,6 @@
         </div>
     </div>
 </div>
-<script src="/statics/assets/js/jquery-1.10.2.js"></script>
-<!-- Bootstrap Js -->
-<script src="/statics/assets/js/bootstrap.min.js"></script>
-
-<!-- Metis Menu Js -->
-<script src="/statics/assets/js/jquery.metisMenu.js"></script>
-<!-- Morris Chart Js -->
-<script src="/statics/assets/js/morris/raphael-2.1.0.min.js"></script>
-<script src="/statics/assets/js/morris/morris.js"></script>
-<script src="/statics/assets/js/easypiechart.js"></script>
-<script src="/statics/assets/js/easypiechart-data.js"></script>
-<!-- Custom Js -->
-<script src="/statics/assets/js/custom-scripts.js"></script>
-
+    <%@include file="/WEB-INF/jsp/commom/foot.jsp"%>
 </body>
-
 </html>

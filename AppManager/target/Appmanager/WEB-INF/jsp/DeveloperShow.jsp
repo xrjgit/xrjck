@@ -30,7 +30,7 @@
 
 <body>
 <div id="wrapper">
-    <nav class="navbar navbar-default top-navbar" role="navigation">
+    <%--<nav class="navbar navbar-default top-navbar" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -86,7 +86,9 @@
                 </li>
             </ul>
         </div>
-    </nav>
+    </nav>--%>
+        <%@include file="/WEB-INF/jsp/commom/head.jsp"%>
+        <%@include file="/WEB-INF/jsp/commom/left.jsp"%>
     <!-- /. NAV SIDE  -->
     <div id="page-wrapper">
         <div id="page-inner" class="hy">
@@ -109,23 +111,23 @@
                         </li>
                         <li>
                             <div>APP状态</div>
-                            <div><select class="select"><option value=""></option></select></div>
+                            <div><select class="select apptatus"></select></div>
                         </li>
                         <li>
                             <div>所属平台</div>
-                            <div><select class="select"><option value=""></option></select></div>
+                            <div><select class="select flatform"><option value=""></option></select></div>
                         </li>
                         <li>
                             <div>一级分类</div>
-                            <div><select class="select"><option value=""></option></select></div>
+                            <div><select class="select cate1"><option value=""></option></select></div>
                         </li>
                         <li>
                             <div>二级分类</div>
-                            <div><select class="select"><option value=""></option></select></div>
+                            <div><select class="select cate2"><option value=""></option></select></div>
                         </li>
                         <li>
                             <div>三级分类</div>
-                            <div><select class="select"><option value=""></option></select></div>
+                            <div><select class="select cate3"><option value=""></option></select></div>
                         </li>
                         <li>
                             <div><input type="submit" class="btn btn-success"/></div>
@@ -192,29 +194,7 @@
 </div>
 <!-- /. PAGE WRAPPER  -->
 </div>
-<!-- /. WRAPPER  -->
-<!-- JS Scripts-->
-<!-- jQuery Js -->
-<script src="/statics/assets/js/jquery-1.10.2.js"></script>
-<!-- Bootstrap Js -->
-<script src="/statics/assets/js/bootstrap.min.js"></script>
-
-<!-- Metis Menu Js -->
-<script src="/statics/assets/js/jquery.metisMenu.js"></script>
-<!-- Morris Chart Js -->
-<script src="/statics/assets/js/morris/raphael-2.1.0.min.js"></script>
-<script src="/statics/assets/js/morris/morris.js"></script>
-
-
-<script src="/statics/assets/js/easypiechart.js"></script>
-<!--<script src="assets/js/easypiechart-data.js"></script>-->
-
-
-<!-- Custom Js -->
-<script src="/statics/assets/js/custom-scripts.js"></script>
-
-<script src="/statics/lr/js/developerselect.js"></script>
-
+<%@include file="/WEB-INF/jsp/commom/foot.jsp"%>
 </body>
 
 </html>
