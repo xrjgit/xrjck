@@ -180,6 +180,7 @@
                                     </tr>
                                     </tbody>
                                 </table>
+<<<<<<< HEAD
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="dataTables_info" id="dataTables-example_info" role="alert" aria-live="polite" aria-relevant="all" style="margin-top: 27px;">
@@ -205,6 +206,8 @@
                                         </div>
                                     </div>
                                 </div>
+=======
+>>>>>>> 1ab2fa52b6ec1a72e2e826dc1427ae86899753c7
                             </div>
 
                         </div>
