@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -19,7 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Controller
-@SessionAttributes(value = "devuser")
+@SessionAttributes(value="devusersession")
 @RequestMapping("/user")
 public class UserController {
     @Autowired
@@ -27,7 +28,7 @@ public class UserController {
 
     @RequestMapping(value = "/dologin",method = RequestMethod.POST)
     @ResponseBody
-    public Map dologin(User user, Model model, @RequestParam(value = "issavepwd",required = false) String issavepwd, HttpServletResponse response){
+    public Map dologin(User user, Model model, @RequestParam(value = "issavepwd",required = false) String issavepwd, HttpServletResponse response, HttpSession session){
         Map<String, String> resultMap = new HashMap<String, String>();
         String devCode=user.getDevCode();
         String devPassword=user.getDevPassword();
@@ -53,7 +54,8 @@ public class UserController {
                         response.addCookie(devuserPwdcookie);
                     }
                     //此处登录成功将该开发者添加到session域
-                    model.addAttribute("devuser",user);
+//                    session.setAttribute("devusersession",user);
+                    model.addAttribute("devusersession",user);
                 }
             }else{
                 resultMap.put("devCodemessage","登录名错误");
@@ -141,5 +143,15 @@ public class UserController {
     public Object isexistsemail(@RequestParam(value = "devEmail",required = false) String devEmail){
         boolean flag=usi.isexistsEmail(devEmail);
         return flag;
+    }
+
+    @RequestMapping("/developershow")
+    public String developershow(HttpSession session){
+        return "DeveloperShow";
+    }
+
+    @RequestMapping(value="/developerselect",method = RequestMethod.GET)
+    public void developerselect(){
+
     }
 }
