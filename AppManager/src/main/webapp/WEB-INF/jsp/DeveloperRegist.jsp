@@ -64,36 +64,9 @@
 
         <div class="sign-content">
             <h2>开发者注册</h2>
-
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="signin-form">
-<<<<<<< HEAD
-                        <form action="signin.html">
-                            <div class="form-col">
-                                <div class="form-group">
-                                    <label for="signin_form">登录名</label>
-                                    <input type="text" class="form-control" id="signin_form" placeholder="请输入登录名">
-                                </div><!--/.form-group -->
-                            </div><!--/.form-col -->
-                            <div class="form-col1">
-                                <div class="form-group">
-                                    <label for="signin_form1">昵称</label>
-                                    <input type="text" class="form-control" id="signin_form1" placeholder="请输入昵称">
-                                </div><!--/.form-group -->
-                            </div><!--/.form-col1 -->
-                            <div class="form-group">
-                                <label for="signin_form2">邮箱</label>
-                                <input type="email" class="form-control" id="signin_form2" placeholder="请输入邮箱">
-                            </div><!--/.form-group -->
-                            <div class="form-group">
-                                <label for="signin_form3">密码</label>
-                                <input type="password" class="form-control" id="signin_form3" placeholder="请输入密码">
-                            </div><!--/.form-group -->
-                            <div class="form-group">
-                                <label for="signin_form4">确认密码</label>
-                                <input type="password" class="form-control" id="signin_form4" placeholder="请再次输入密码">
-=======
+                    <div class="signin-form">+
                         <fm:form method="post" modelAttribute="user">
                                 <div class="form-col">
                                     <div class="form-group">
@@ -123,7 +96,6 @@
                                 <label for="signin_form">确认密码</label>
                                 <input type="password" name="repwd" class="form-control" id="signin_form" placeholder="请再次输入密码" value="${repwd}">
                                 <span class="repwd" style="color: #ff0000">${devrepwderror}</span>
->>>>>>> bafad2670f5c26235e211305d681a0e8a0c09692
                             </div><!--/.form-group -->
 
                             <div class="row">
